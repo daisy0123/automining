@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+        <title>汽车车系分析</title>
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/automining.css" />
+        <link rel="shortcut icon" href="img/favicon.ico" />
+    </head>
+    <body data-spy="scroll" data-target=".navbar-scroll" data-offset="0">  
+        <nav class="navbar navbar-default navbar-fixed-top navbar-black" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">                  
+                    <a class="navbar-brand" href="index.html">广东省汽车企业情报分析</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    
+                     <!--<form class="navbar-form navbar-left navbar-search" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control search-control" placeholder="输入汽车名称">
+                        </div>
+                        <button type="submit" class="btn btn-default search-submit">查看</button>
+                    </form>-->
+                    <ul class="nav navbar-nav navbar-right nav-black-font">
+                        <li><a href="index.html">汽车评价地图</a></li>
+                        <li><a href="all.html">查看汽车列表</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">汽车详细分析 <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="corp.html">汽车企业分析</a></li>
+                                <li><a href="brand.html">汽车品牌分析</a></li>
+                                <li><a href="series.html">汽车车系分析</a></li>                               
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="row crop-car-container">
+            <div class="container-fluid progress-fixed">                
+                <div class="progress-show">   
+                </div>              
+            </div> 
+            <div class="all-container">              
+                <div class="col-md-2 corp-nav">
+                    <nav class="row navbar navbar-default navbar-scroll">  
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <h4 class=" text-center sinal-show" id="headName">
+                                    雅阁
+                                </h4>
+                            </li>
+                            <li>
+                                <a href="#查看车系">
+                                    <i class="fa fa-car">&emsp;</i>
+                                    查看车系
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#车系简介">
+                                    <i class="fa fa-credit-card-alt">&emsp;</i>
+                                    车系简介
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#车系评价分析">
+                                    <i class="fa fa-bar-chart">&emsp;</i>
+                                    车系评价分析
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#评论分布">
+                                    <i class="fa fa-pie-chart">&emsp;</i>
+                                    评论分布
+                                </a>
+                            </li>   
+                            <li>
+                                <a href="#车型排行榜">
+                                    <i class="fa fa-sort-amount-desc">&emsp;</i>
+                                    车型排行榜
+                                </a>      
+                            </li>
+
+                            <li>
+                                <a href="#车系关注趋势">
+                                    <i class="fa fa-line-chart">&emsp;</i>
+                                    车系关注趋势
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#车系价格趋势">
+                                    <i class="fa fa-line-chart">&emsp;</i>
+                                    车系价格趋势
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#关键词条">
+                                    <i class="fa fa-file-word-o">&emsp;</i>
+                                    关键词条
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#查看评论">
+                                    <i class="fa fa-commenting-o">&emsp;</i>
+                                    查看评论
+                                </a>
+                            </li>                        
+                            <li>
+                                <a href="#图片集">
+                                    <i class="fa fa-picture-o">&emsp;</i>
+                                    图片集
+                                </a>
+                            </li>
+                        </ul> 
+                    </nav>
+                </div>
+                <div class="col-md-10 col-md-offset-2">
+                    <div class="row crop-all-container">
+                        <div class="row crop-intro-container" id="查看车系">
+                            <div class="col-md-12 corp-intro-title">
+                                <i class="fa fa-car fa-2x"></i>
+                                <h4>汽车车系</h4>
+                            </div>                       
+                            <div class="col-md-12 crop-padding series-car-list">
+                                <ul class="series-sinal">
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 1)">传祺GS5 Super</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 2)">传祺GS5</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 4)">传祺GS4</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 5)">传祺GA3S视界</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 3)">传祺GA3</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 6)">传祺GA5</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 7)">传祺GA6</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 8)">丰田-雅力士</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 9)">丰田-YARiS L 致炫</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 10)">丰田-汉兰达</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 11)">丰田-雷凌</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 12)">丰田-凯美瑞</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 13)">丰田-逸致</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 14)">本田-思迪</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 15)">本田-奥德赛</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 16)">本田-歌诗图</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 17)">本田-凌派</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 18)">本田-缤智</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 19)">本田-飞度</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 20)">本田-锋范经典</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 21)">本田-锋范</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 22)">本田-理念S1</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 23)">本田-雅阁</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 24)">菲亚特-菲翔</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 25)">菲亚特-致悦</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 26)">三菱-帕杰罗</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 27)">三菱-帕杰罗 劲畅</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 28)">三菱-劲炫ASX</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 29)">吉奥-财运100</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 30)">吉奥-财运300</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 31)">吉奥-星朗</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 32)">吉奥-星旺</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 33)">吉奥-吉奥GX6</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 34)">吉奥-E美</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 35)">吉奥-奥轩G3</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 36)">吉奥-奥轩GX5</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 37)">吉奥-星旺CL</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 38)">吉奥-奥轩G5</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 39)">吉奥-吉奥GP150</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 40)">比亚迪E6</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 41)">比亚迪F6</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 42)">比亚迪-速锐</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 43)">比亚迪F3</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 44)">比亚迪G3</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 45)">比亚迪G6</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 46)">比亚迪-秦</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 47)">比亚迪G5</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 48)">比亚迪-福莱尔</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 49)">比亚迪-宋</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 50)">比亚迪-唐</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 51)">比亚迪-腾势</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 52)">比亚迪S6</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 53)">比亚迪M6</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 54)">比亚迪F0</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 55)">比亚迪F3R</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 56)">比亚迪S7</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 57)">比亚迪L3</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 58)">比亚迪G3R</a></li>
+                                    <li><a href="javascript:void(0)" onclick="getData(3, 59)">比亚迪-思锐</a></li>
+                                </ul>
+                            </div>
+                        </div> 
+                        <div class="row crop-intro-container" id="车系简介">
+                            <div class="col-md-12 corp-intro-title">
+                                <div class="col-md-12 corp-intro-title">
+                                    <i class="fa fa-credit-card-alt fa-2x"></i>
+                                    <h4>车系简介</h4>
+                                </div>  
+                            </div>
+                            <div class="col-md-12 crop-intro">
+                                <p class="crop-information" id="introduce">
+                                    &emsp;&emsp; 比亚迪创立于1956年，是一家中国汽车品牌，主要生产商务轿车和家用轿车。比亚迪汽车遵循自主研发、自主生产、自主品牌的发展路线，矢志打造真正物美价廉的国民用车，产品的设计既汲取国际潮流的先进理念，又符合中国文化的审美观念。比亚迪新标识将不再沿用原有的蓝白相间色，图案改为椭圆形状，并加入了光影元素。从字体的排列、图形的颜色都发生了巨大变化，突出了比亚迪汽车的创新、科技和企业文化精髓，令比亚迪品牌注入了新的内涵和活力。　　比亚迪高层人士透露，比亚迪新标识更加简洁直观，并具有国际化元素。通过这次换标，比亚迪汽车将围绕打造国际品牌这个目标，全面促进企业产、科、研、销各个层面国际品牌意识的提高，不断提高企业的市场洞察力，最终达到比亚迪品牌的优质和高含金量。比亚迪股份公司创立于1995年，由20多人的规模起步，2003年成长为全球第二大充电电池生产商，同年组建比亚迪汽车。以做电池起家的比亚迪谈到造汽车，无非是在扮演一位“门外汉”的角色。正是利用了“自主知识产权”的响亮名号和对秦川汽车的收购行为，使得比亚迪有了相对于其他新手的先发优势。短短一年内，比亚迪汽车的产品线由原来单一的“福莱尔”微型轿车，迅速扩充为包括a级燃油车、c级燃油轿车、锂离子电动汽车、混合动力汽车在内的全线产品。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row crop-intro-container" id="车系评价分析">
+                            <div class="col-md-12 corp-intro-title">
+                                <i class="fa fa-bar-chart fa-2x"></i>
+                                <h4>车系评价分析</h4>
+                            </div>                       
+                            <div class="col-md-12 crop-padding">
+                                <div class="crop-anlyse" id="crop-comment-anlyse"></div>
+                            </div>                                               
+                        </div>
+                        <div class="row crop-intro-container" id="评论分布">
+                            <div class="col-md-12 corp-intro-title">
+                                <i class="fa fa-pie-chart fa-2x"></i>
+                                <h4>评论分布</h4>
+                            </div>                       
+                            <div class="col-md-12 crop-padding">
+                                <div class="crop-anlyse" id="crop-area-anlyse"></div>
+                            </div>                                               
+                        </div>
+                        <div class="row crop-intro-container" id="车型排行榜">
+                            <div class="col-md-12 corp-intro-title">
+                                <i class="fa fa-sort-amount-desc fa-2x"></i>
+                                <h4>车型排行榜</h4>
+                            </div>                       
+                            <div class="col-md-12 crop-padding">
+                                <div class="crop-anlyse" id="crop-rank-anlyse"></div>
+                            </div>                                               
+                        </div>
+                        <div class="row crop-intro-container" id="车系关注趋势">
+                            <div class="col-md-12 corp-intro-title">
+                                <i class="fa fa-line-chart fa-2x"></i>
+                                <h4>车系关注趋势</h4>
+                                <!--<span class="tread-selection">
+                                    <label>年份选择：</label>
+                                    <select class="form-control tread-select" onchange="changeData(3, this.value)">
+                                        <option>2013</option>
+                                        <option>2014</option>
+                                        <option>2015</option>
+                                        <option selected>2016</option>                                
+                                    </select>
+                                </span> -->
+                            </div>                       
+                            <div class="col-md-12 crop-padding">   
+                                <div class="crop-anlyse" id="serie-love-tread"></div>
+                            </div>                                               
+                        </div>
+                        <div class="row crop-intro-container" id="车系价格趋势">
+                            <div class="col-md-12 corp-intro-title">
+                                <i class="fa fa-line-chart fa-2x"></i>
+                                <h4>车系价格分析</h4>
+                                <!--<span class="tread-selection">
+                                    <label>年份选择：</label>
+                                    <select class="form-control tread-select" onchange="changePrice(this.value)">
+                                        <option>2013</option>
+                                        <option>2014</option>
+                                        <option>2015</option>
+                                        <option selected>2016</option>                                
+                                    </select>
+                                </span> -->
+                            </div>                       
+                            <div class="col-md-12 crop-padding">
+                                <div class="crop-anlyse" id="crop-price-tread"></div>
+                            </div>                                               
+                        </div>
+                        <div class="row crop-intro-container" id="关键词条">
+                            <div class="col-md-12 corp-intro-title">
+                                <i class="fa fa-file-word-o fa-2x"></i>
+                                <h4>关键词条</h4>
+                            </div>                       
+                            <div class="col-md-12 crop-padding">
+                                <div class="crop-anlyse" id="crop-information-anlyse"></div>
+                            </div>                                               
+                        </div>
+                        <div class="row crop-intro-container" id="查看评论">
+                            <div class="col-md-12 corp-intro-title">
+                                <i class="fa fa-commenting-o fa-2x"></i>
+                                <h4>查看评论</h4>
+                            </div>                       
+                            <div class="col-md-12 crop-comment-list" id="comment"> 
+                                <blockquote>
+                                    <p class="crop-p">
+                                        外观大气霸气空间超大座椅舒适性强。客观得说，首先是本田的发动机技术吸引了我，身边的朋友买的本田车开了十年八年都不用修理，咱老百姓买车不图别的，看的是质量；其次是车体空间宽大，商务家用都可以，开出去朋友都大加称赞；第三是叹服于本田的创新，无论是技术性能，还是外观内饰，都可以和欧美车相媲美，甚至还有超越。动力一般般，但是深踩一样有劲。
+                                    </p>
+                                    <footer>来自 <cite title="Source Title">江西的网友</cite></footer>
+                                </blockquote>
+                                <blockquote>
+                                    <p class="crop-p">
+                                        外观大气霸气空间超大座椅舒适性强。客观得说，首先是本田的发动机技术吸引了我，身边的朋友买的本田车开了十年八年都不用修理，咱老百姓买车不图别的，看的是质量；其次是车体空间宽大，商务家用都可以，开出去朋友都大加称赞；第三是叹服于本田的创新，无论是技术性能，还是外观内饰，都可以和欧美车相媲美，甚至还有超越。动力一般般，但是深踩一样有劲。
+                                    </p>
+                                    <footer>来自 <cite title="Source Title">江西的网友</cite></footer>
+                                </blockquote>
+                                <blockquote>
+                                    <p class="crop-p">
+                                        外观大气霸气空间超大座椅舒适性强。客观得说，首先是本田的发动机技术吸引了我，身边的朋友买的本田车开了十年八年都不用修理，咱老百姓买车不图别的，看的是质量；其次是车体空间宽大，商务家用都可以，开出去朋友都大加称赞；第三是叹服于本田的创新，无论是技术性能，还是外观内饰，都可以和欧美车相媲美，甚至还有超越。动力一般般，但是深踩一样有劲。
+                                    </p>
+                                    <footer>来自 <cite title="Source Title">江西的网友</cite></footer>
+                                </blockquote>                               
+                            </div>
+                            <nav>
+                                <ul class="pager">
+                                    <li><a href="javascript:void(0)" onclick="changeComment(3)">换一批</a></li>    
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="row crop-intro-container" id="图片集">
+                            <div class="col-md-12 corp-intro-title">
+                                <i class="fa fa-picture-o fa-2x"></i>
+                                <h4>图片集</h4>
+                            </div>                       
+                            <div class="col-md-12 crop-pic-padding">
+                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">                                 
+                                    <div class="carousel-inner crop-pic-sclie" role="listbox" id="picture">
+                                        <div class="item active">
+                                            <img src="http://image.16888.com/picLib/57328/57331/2010122809565917_5.jpg" alt="...">                                       
+                                        </div>
+                                        <div class="item">
+                                            <img src="http://pic.52che.com/marketing/shenyang/2010-06-04/2006454310.jpg" alt="...">                                        
+                                        </div>
+                                        <div class="item">
+                                            <img src="http://image.bitauto.com/dealer/news/100030401/6408071f-f5c9-4808-8826-806ef1c1beb1.jpg" alt="...">                                        
+                                        </div>
+                                    </div>                                    
+                                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                                <!--<nav>
+                                    <ul class="pager">
+                                        <li><a href="javascript:void(0)" onclick="changePicture(3)">在线更新图片集</a></li>                                  
+                                    </ul>
+                                </nav>-->
+                            </div>                                               
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="col-md-12 bottom-name">
+
+            <p>
+                &copy; 2016
+                <a href="http://www.gdufs.edu.cn/" target="_blank">
+                    广东外语外贸大学
+                </a>
+                <a href="http://iiip.gdufs.edu.cn/">
+                    智能信息处理研究所 数据挖掘实验室
+                </a> 保留所有权利
+                <a href="about.html" target="_blank">
+                    关于我们
+                </a>
+
+            </p>
+
+        </div>
+        <script src="echarts/build/dist/echarts.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/automining.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,113 @@
+#wBox .wBox_b {
+	filter: alpha(opacity=80);
+	-moz-opacity: .8;
+	opacity: .8;
+	background-color: #f6df3b;
+	width: 8px;
+}
+
+#wBox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	text-align: left;
+	display: none;
+}
+
+#wBox .wBox_popup {
+	position: relative;
+	box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+#wBox table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#wBox td {
+	border-bottom: 0;
+	padding: 0;
+}
+
+#wBox .wBox_body {
+	background-color: #fff;
+	border: 1px solid #FFFFFF;
+}
+
+#wBox img {
+	border: 0;
+	margin: 0;
+}
+
+#wBox .wBox_title {
+	height: 28px;
+	color: #f6df3b;
+	width: 100%;
+	
+}
+
+#wBox .wBox_title .wBox_itemTitle {
+	text-align: center;
+	line-height: 28px;
+	overflow: hidden;
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+
+#wBox .wBox_title .wBox_close {
+	background: url(../img/close.png) no-repeat 0 0;
+	height: 14px;
+	width: 14px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#wBox .wBox_title .on {
+	background-position: 0 -14px;
+}
+
+#wBox .wBox_tl,
+#wBox .wBox_tr,
+#wBox .wBox_bl,
+#wBox .wBox_br {
+	height: 8px;
+	width: 8px;
+	overflow: hidden;
+	background-image: url(../img/wbox.gif);
+	padding: 0;
+	filter: alpha(opacity=80);
+	-moz-opacity: .8;
+	opacity: .8;
+}
+
+#wBox #wBoxContent {
+	padding: 3px;
+}
+
+#wBox_overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+#wBox .wBox_load {
+	width: 270px;
+}
+
+.wBox_hide {
+	z-index: -100;
+}
+
+.wBox_overlayBG {
+	background-color: #FFF;
+	z-index: 99;
+}
+
+#wBox #wBox_loading {
+	width: 32px;
+	height: 32px;
+	margin: 0 auto;
+}

@@ -1,0 +1,644 @@
+body {
+	font-family: "微软雅黑";
+	width: 100%;
+	position: relative;
+	background: #393939;
+}
+
+
+/**
+ * 公共部分 导航条
+ * */
+
+.navbar-default {
+	border-color: #434343;
+	background-color: #434343;
+}
+
+.navbar-black {
+	background: #434343;
+	border-color: #666;
+	height: 50px;
+}
+
+.navbar-black .navbar-brand,
+.navbar-black .navbar-brand:hover,
+.navbar-black .navbar-brand:focus {
+	color: #fff;
+}
+
+.navbar-black .nav-black-font>li>a {
+	color: #fff;
+}
+
+.navbar-black .nav-black-font>li>a:hover,
+.navbar-default .nav-black-font>li>a:focus {
+	color: #fff;
+}
+
+.navbar-search {
+	padding-left: 480px;
+}
+
+.search-control,
+.search-submit {
+	height: 30px;
+}
+
+
+/*
+ 尾部
+ * */
+
+.bottom-name {
+	background: #000;
+	height: 60px;
+}
+
+.bottom-name p {
+	padding-top: 20px;
+	text-align: center;
+	color: #fff;
+	font-size: 0.85em;
+}
+
+.bottom-name a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.bottom-name a:hover {
+	color: #3399FF;
+}
+
+
+/*
+ 首页
+ * */
+
+.index-container {
+	padding-top: 45px;
+	background: #000;
+	opacity: 0.9;
+}
+
+.block {
+	height: 560px;
+	padding: 10px 0px 0px 0px;
+	margin-bottom: 5px;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.block-left,
+.block-map {
+	height: 550px;
+}
+
+.map-show {
+	height: 550px;
+	position: relative;
+}
+
+.data-show-title {
+	padding-top: 30px;
+}
+
+.data-show-title i {
+	float: left;
+	color: #fff;
+}
+
+.data-show-title h4 {
+	color: #fff;
+}
+
+.data-show-list {
+	padding-top: 10px;
+}
+
+.data-show-list ul {
+	list-style: circle;
+	color: #fff;
+}
+
+.bar-show {
+	width: auto;
+	height: auto;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.barSize {
+	width: 10px;
+	height: 0px;
+}
+
+.bar-selection {
+	margin-top: 30px;
+	height: 70px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.bar-sel,
+.bar-all-sel {
+	height: 30px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+
+/*
+*图片淡入淡出
+*/
+
+.jphtml {
+	margin: 0 auto;
+}
+
+.yiz-slider-1 {
+	height: 550px;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+
+.yiz-slider-1 ul {
+	z-index: -10;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	height: auto;
+	width: 100%;
+	list-style-type: none;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.yiz-slider-1 ul li {
+	height: auto;
+	width: 100%;
+	float: left;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	z-index: -10;
+}
+
+.yiz-slider-1 ul li img {
+	width: 100%;
+	z-index: -10;
+}
+
+.yiz-page-btn {
+	display: none;
+	float: left;
+	width: auto;
+	height: 30px;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+
+.yiz-page-btn span {
+	height: 30px;
+	width: 30px;
+	background-color: #999;
+	display: block;
+	float: left;
+	line-height: 30px;
+	text-align: center;
+	color: #FFF;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.yiz-page-btn .current {
+	background-color: #1D5D76;
+}
+
+
+/**/
+
+.ranktable {
+	margin-top: 30px;
+	margin-bottom: 10px;
+	background: #434343;
+}
+
+.ranktable-title {
+	padding: 3px 5px 10px 7px;
+}
+
+.ranktable-title i {
+	display: block;
+	float: left;
+	background-color: #999;
+	width: 10px;
+	height: 30px;
+}
+
+.ranktable-title span {
+	display: block;
+	width: 120px;
+	height: 30px;
+	color: #999;
+	background-color: #e7e7e7;
+	cursor: pointer;
+	border-radius: 2px;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.table-rank {
+	padding: 50px 20px 50px 20px;
+}
+
+.number {
+	float: left;
+	margin-right: 5px;
+}
+
+.progress {
+	height: 7px;
+	margin-top: 5px;
+}
+
+.bar {
+	height: 7px;
+	background-color: #f6df3b;
+}
+
+.rank-pic img {
+	height: 40px;
+	float: left;
+	margin-right: 10px;
+}
+
+.rank-pic h3 {
+	margin-top: 15px;
+	color: #fff;
+}
+
+.tb th,
+td,
+p {
+	color: #fff;
+}
+
+
+/*
+查看汽车列表
+*/
+
+.seeAll-container {
+	margin-top: 55px;
+	background: #434343;
+	border-top: 1px solid #666;
+}
+
+.corp-list {
+	padding-top: 80px;
+	margin-bottom: 20px;
+}
+
+.corp-title i {
+	display: block;
+	background-color: #f6df3b;
+	width: 10px;
+	height: 31px;
+	float: left;
+}
+
+.corp-title span {
+	color: #666;
+	background-color: #e7e7e7;
+	cursor: pointer;
+	font-size: 18px;
+	line-height: 30px;
+	padding: 3px 15px 4px 0px;
+}
+
+.corp-list-show {
+	background: transparent;
+	border-bottom: 2px solid #dedede;
+}
+
+.corp-list-show p {
+	color: #fff;
+	text-indent: 25px;
+}
+
+.corp-list-show span {
+	color: #f6df3b;
+}
+
+.media-show {
+	padding: 10px 20px 10px 20px;
+}
+
+.car-pic img {
+	margin-top: 30px;
+	margin-left: 50px;
+}
+
+.media-show h4 {
+	font-size: 17px;
+}
+
+.more {
+	color: dodgerblue;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.more:hover {
+	color: #87CEFA;
+}
+
+.car-show-list {
+	padding-left: 15px;
+}
+
+.car-show-list li {
+	float: left;
+	margin-right: 10px;
+}
+
+.car-show-list li>a,
+.media-show a {
+	color: #f6df3b;
+}
+
+.crop-introduction {
+	background: #fff;
+}
+
+.close-btn {
+	margin-top: -20px;
+	float: right;
+	padding: 2px 5px 2px 5px;
+}
+
+.crop-container,
+.brand-container,
+.serie-container {
+	margin-top: 5px;
+}
+
+.brand-list {
+	margin-top: 20px;
+}
+
+.serie-list {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.panel-default>.panel-heading {
+	background: #f6df3b;
+}
+
+.panel-default>.panel-heading h3 {
+	color: #fff;
+	font-weight: bold;
+}
+
+
+/**
+*汽车详细分析
+汽车品牌
+**/
+
+.progress-fixed {
+	height: 3px;
+	padding-bottom: 10px;
+	display: none;
+}
+
+.progress-fixed .progress-show {
+	width: 60px;
+	height: 3px;
+	background: #f6df3b;
+}
+
+.all-container {
+	padding-top: 5px;
+}
+
+.crop-car-container {
+	background-color: #393939;
+	padding-top: 51px;
+}
+
+.corp-nav {
+	min-height: 600px;
+	position: fixed;
+	background: #434343;
+	border-right: 1px solid #666;
+}
+
+.navbar-scroll ul {
+	border-radius: 0;
+}
+
+.navbar-scroll ul>li {
+	width: 100%;
+	height: 45px;
+	background: #434343;
+	text-indent: 10%;
+	border-top: 2px solid #dedede;
+}
+
+.navbar-scroll ul>li:first-child {
+	border-top: none;
+}
+
+.navbar-scroll .navbar-nav>li>a,
+h4 {
+	color: #fff;
+}
+
+.navbar-scroll .navbar-nav>li>a:hover,
+.navbar-scroll .navbar-nav>li>a:focus {
+	color: #f6df3b;
+}
+
+.crop-all-container {
+	padding: 0px 50px 20px 30px;
+}
+
+.crop-intro-container {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #434343;
+	border-bottom: 2px solid #dedede;
+	border-left: 1px solid #666;
+	border-right: 1px solid #666;
+}
+
+.crop-intro {
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+.corp-intro-title {
+	margin-left: -15px;
+	margin-top: -10px;
+	color: #f6df3b;
+	padding-left: 30px;
+	padding-top: 10px;
+}
+
+.corp-intro-title i {
+	float: left;
+	margin-right: 10px;
+	margin-top: 7px;
+}
+
+.corp-intro-title h4 {
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+	float: left;
+}
+
+.crop-information {
+	margin: 10px 20px 15px 20px;
+}
+
+.crop-padding,
+.crop-comment-show {
+	padding: 20px 25px 20px 25px;
+}
+
+.crop-anlyse {
+	height: 350px;
+}
+
+p.crop-p {
+	font-size: 15px;
+}
+
+.crop-text a:hover,
+a:focus {
+	text-decoration: none;
+}
+
+.crop-pic-sclie>.item>img {
+	height: 500px;
+	min-width: 100%;
+}
+
+.crop-pic-padding {
+	padding: 20px 30px 20px 30px;
+}
+
+.series-car-list ul li {
+	float: left;
+	margin: 2px;
+	margin-left: 20px;
+	width: 150px;
+}
+
+.series-car-list .series-sinal li>a {
+	color: #fff;
+}
+
+.tread-selection {
+	width: 200px;
+	float: right;
+	padding-top: 10px;
+}
+
+.tread-selection label {
+	float: left;
+	color: #fff;
+}
+
+.tread-selection .tread-select {
+	width: 70px;
+	height: 25px;
+	font-size: 15px;
+	padding: 2px 5px 2px 5px;
+	margin-top: -2px;
+}
+
+.all-car-show {
+	background: #434343;
+}
+
+.all-car-show img {
+	display: block;
+	margin: 0 auto;
+}
+
+.brand-car-list h4 {
+	color: #666;
+	font-size: 16px;
+}
+
+.pager a {
+	color: #666;
+}
+
+
+/*
+*进度条加载
+*/
+
+
+/*
+*about页面
+*/
+
+.about-container {
+	padding-bottom: 20px;
+}
+
+.about-media {
+	padding-top: 25px;
+	padding-bottom: 10px;
+	border-bottom: 2px #dedede solid;
+}
+
+.about-body {
+	padding-top: 20px;
+}
+
+.about-text {
+	margin-top: 20px;
+}
+
+.about-text h4>a {
+	color: #f6df3b;
+}
+
+.about-text p {
+	text-indent: 30px;
+}
+
+
+/**/
+
+span.text-hidden {
+	color: #fff;
+	display: none;
+}
+
+span.more-sinal {
+	color: #fff;
+}
+
+.cob {
+	color: pink;
+}
+
+.cadj {
+	color: red;
+}
