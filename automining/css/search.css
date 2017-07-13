@@ -1,0 +1,22 @@
+
+.search-container{
+	padding: 100px 0px 20px 0px;
+}
+h3{
+	text-align: center;
+	color: #F6DF3B;
+}
+.search-search input{
+	border: 3px solid #F6DF3B;
+}
+.search-search span{
+	border: 3px solid #F6DF3B;
+	background: transparent;
+	cursor: pointer;
+}
+.search-search i{
+	color: #F6DF3B;
+}
+.search-con{
+	margin-bottom: 20px;
+}

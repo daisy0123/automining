@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html" charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimun-scale=1,maximun-scale=1,user-scalable=no" />
+		<title>对比页面</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/automining.css" />
+		<link rel="stylesheet" type="text/css" href="css/search.css" />
+		<link rel="stylesheet" href="css/compare.css" />
+		<link rel="shortcut icon" href="img/favicon.ico" />
+		<style type="text/css">
+			.col-sm-6{
+				border: solid 1px white;
+				border-bottom: none;
+				min-height: 700px;
+				height: auto;
+			}
+			select[class^='brand']{
+				display: none;
+			}
+			select[class^='serie']{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top navbar-black" ro le="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html">广东省汽车产品评论挖掘系统</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right nav-black-font">
+						<li>
+							<a href="index.html">汽车评价地图</a>
+						</li>
+						<li>
+							<a href="all.html">查看汽车列表</a>
+						</li>
+						<li>
+							<a href="compare.html">对比分析</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">汽车详细分析 <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="corp.html">汽车企业分析</a>
+								</li>
+								<li>
+									<a href="brand.html">汽车品牌分析</a>
+								</li>
+								<li>
+									<a href="series.html">汽车车系分析</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="row crop-car-container">
+			<div class="col-sm-6 block1">
+				<p class="head">请选择需要进行对比的车型</p>
+				<div class="row">
+					<div class="col-sm-4">
+						<select name="company" class="company">
+							<option value=""></option>
+							<option value="1">广汽集团</option>
+							<option value="2">比亚迪集团</option>
+						</select>
+					</div>
+					<div class="col-sm-4">
+						<select name="brand_1" class="brand_1">
+							<option value="0"></option>
+							<option value="1">广汽传祺</option>
+							<option value="2">广汽丰田</option>
+							<option value="3">广汽本田</option>
+							<option value="4">广汽菲克菲亚特</option>
+							<option value="5">广汽三菱</option>
+							<option value="6">广汽吉奥</option>
+						</select>
+						<select name="brand_2" class="brand_2">
+							<option value="0"></option>
+							<option value="7">比亚迪</option>
+						</select>
+					</div>
+					<div class="col-sm-4">
+						<select name="serie_1" class="serie_1">
+							<option value="0"></option>
+							<option value="1">传祺GS5 Super</option>
+							<option value="2">传祺GS5</option>
+							<option value="3">传祺GA3</option>
+							<option value="4">传祺GS4</option>
+							<option value="5">传祺GA3S视界</option>
+							<option value="6">传祺GA5</option>
+							<option value="7">传祺GA6</option>
+						</select>
+						<select name="serie_2" class="serie_2">
+							<option value="0"></option>
+							<option value="8">雅力士</option>
+							<option value="9">YARiS L 致炫</option>
+							<option value="10">汉兰达</option>
+							<option value="11">雷凌</option>
+							<option value="12">凯美瑞</option>
+							<option value="13">逸致</option>
+						</select>
+						<select name="serie_3" class="serie_3">
+							<option value="0"></option>
+							<option value="14">思迪</option>
+							<option value="15">奥德赛</option>
+							<option value="16">歌诗图</option>
+							<option value="17">凌派</option>
+							<option value="18">缤智</option>
+							<option value="19">飞度</option>
+							<option value="20">锋范经典</option>
+							<option value="21">锋范</option>
+							<option value="22">理念S1</option>
+							<option value="23">雅阁</option>
+						</select>
+						<select name="serie_4" class="serie_4">
+							<option value="0"></option>
+							<option value="24">菲翔</option>
+							<option value="25">致悦</option>
+						</select>
+						<select name="serie_5" class="serie_5">
+							<option value="0"></option>
+							<option value="26">帕杰罗</option>
+							<option value="27">帕杰罗 劲畅</option>
+							<option value="28">劲炫ASX</option>
+						</select>
+						<select name="serie_6" class="serie_6">
+							<option value="0"></option>
+							<option value="29">财运100</option>
+							<option value="30">财运300</option>
+							<option value="31">吉奥-星朗</option>
+							<option value="32">星旺</option>
+							<option value="33">广汽吉奥GX6</option>
+							<option value="34">E美</option>
+							<option value="35">奥轩G3</option>
+							<option value="36">奥轩GX5</option>
+							<option value="37">星旺CL</option>
+							<option value="38">奥轩G5</option>
+							<option value="39">广汽吉奥GP150</option>
+						</select>
+						<select name="serie_7" class="serie_7">
+							<option value="0"></option>
+							<option value="40">比亚迪e6</option>
+							<option value="41">比亚迪F6</option>
+							<option value="42">速锐</option>
+							<option value="43">比亚迪F3</option>
+							<option value="44">比亚迪G3</option>
+							<option value="45">比亚迪G6</option>
+							<option value="46">比亚迪-秦</option>
+							<option value="47">比亚迪G5</option>
+							<option value="48">福莱尔</option>
+							<option value="49">比亚迪-宋</option>
+							<option value="50">比亚迪-唐</option>
+							<option value="51">腾势</option>
+							<option value="52">比亚迪S6</option>
+							<option value="53">比亚迪M6</option>
+							<option value="54">比亚迪F0</option>
+							<option value="55">比亚迪F3R</option>
+							<option value="56">比亚迪S7</option>
+							<option value="57">比亚迪L3</option>
+							<option value="58">比亚迪G3R</option>
+							<option value="59">思锐</option>
+						</select>
+					</div>
+				</div><br />
+				<p class="margin-left">属性(可选)</p>
+				<select name="attr_1" class="attr_1" onchange="change(1)">
+							<option value="0"></option>
+							<option value="8">性价比</option>
+							<option value="7">内饰</option>
+							<option value="6">外观</option>
+							<option value="5">舒适性</option>
+							<option value="4">油耗</option>
+							<option value="3">操控</option>
+							<option value="2">动力</option>
+							<option value="1">空间</option>
+				</select><br />
+				<button class="con-1 btn btn-default">确定</button>
+				
+				<div class="row crop-intro-container" id="品牌简介">
+							<div class="col-md-12 corp-intro-title">
+								<i class="fa fa-credit-card-alt  fa-2x"></i>
+								<h4>简介</h4>
+							</div>
+							<div class="col-md-12 crop-intro">
+								<p class="crop-information intro1" id="introduce intro1">
+									&emsp;&emsp; 比亚迪创立于1956年，是一家中国汽车品牌，主要生产商务轿车和家用轿车。比亚迪汽车遵循自主研发、自主生产、自主品牌的发展路线，矢志打造真正物美价廉的国民用车，产品的设计既汲取国际潮流的先进理念，又符合中国文化的审美观念。比亚迪新标识将不再沿用原有的蓝白相间色，图案改为椭圆形状，并加入了光影元素。从字体的排列、图形的颜色都发生了巨大变化，突出了比亚迪汽车的创新、科技和企业文化精髓，令比亚迪品牌注入了新的内涵和活力。　　比亚迪高层人士透露，比亚迪新标识更加简洁直观，并具有国际化元素。通过这次换标，比亚迪汽车将围绕打造国际品牌这个目标，全面促进企业产、科、研、销各个层面国际品牌意识的提高，不断提高企业的市场洞察力，最终达到比亚迪品牌的优质和高含金量。比亚迪股份公司创立于1995年，由20多人的规模起步，2003年成长为全球第二大充电电池生产商，同年组建比亚迪汽车。以做电池起家的比亚迪谈到造汽车，无非是在扮演一位“门外汉”的角色。正是利用了“自主知识产权”的响亮名号和对秦川汽车的收购行为，使得比亚迪有了相对于其他新手的先发优势。短短一年内，比亚迪汽车的产品线由原来单一的“福莱尔”微型轿车，迅速扩充为包括a级燃油车、c级燃油轿车、锂离子电动汽车、混合动力汽车在内的全线产品。
+								</p>
+							</div>
+				</div>
+				<div class="row crop-intro-container attr1" id="属性分析">
+							<div class="col-sm-12 corp-intro-title">
+								<i class="fa fa-pie-chart  fa-2x"></i>
+								<h4 class="attrname1">属性分析</h4>
+							</div>
+							<div class="col-sm-12 crop-padding">
+								<div class="crop-anlyse" id="crop-attr-anlyse attr1"></div>
+							</div>
+				</div>
+				<div class="row crop-intro-container ana_block1" id="品牌评价分析">
+							<div class="col-sm-12 corp-intro-title">
+								<i class="fa fa-bar-chart  fa-2x"></i>
+								<h4>评价分析</h4>
+							</div>
+							<div class="col-sm-12 crop-padding">
+								<div class="crop-anlyse" id="crop-comment-anlyse ana1"></div>
+							</div>
+				</div>
+				<div class="row crop-intro-container" id="品牌关注趋势">
+							<div class="col-sm-12 corp-intro-title">
+								<i class="fa fa-line-chart  fa-2x"></i>
+								<h4>关注趋势</h4>
+							</div>
+							<div class="col-sm-12 crop-padding">
+								<div class="crop-anlyse" id="brand-love-tread tend1"></div>
+							</div>
+				</div>
+				<div class="row crop-intro-container" id="查看评论">
+                            <div class="col-sm-12 corp-intro-title">
+                                <i class="fa fa-commenting-o fa-2x"></i>
+                                <h4>查看评论</h4>
+                            </div>                       
+                            <div class="col-sm-12 crop-comment-list" id="comment_1"> 
+                                <blockquote>
+                                    <p class="crop-p">
+                                        外观大气霸气空间超大座椅舒适性强。客观得说，首先是本田的发动机技术吸引了我，身边的朋友买的本田车开了十年八年都不用修理，咱老百姓买车不图别的，看的是质量；其次是车体空间宽大，商务家用都可以，开出去朋友都大加称赞；第三是叹服于本田的创新，无论是技术性能，还是外观内饰，都可以和欧美车相媲美，甚至还有超越。动力一般般，但是深踩一样有劲。
+                                    </p>
+                                    <footer>来自 <cite title="Source Title">江西的网友</cite></footer>
+                                </blockquote>
+                                <blockquote>
+                                    <p class="crop-p">
+                                        外观大气霸气空间超大座椅舒适性强。客观得说，首先是本田的发动机技术吸引了我，身边的朋友买的本田车开了十年八年都不用修理，咱老百姓买车不图别的，看的是质量；其次是车体空间宽大，商务家用都可以，开出去朋友都大加称赞；第三是叹服于本田的创新，无论是技术性能，还是外观内饰，都可以和欧美车相媲美，甚至还有超越。动力一般般，但是深踩一样有劲。
+                                    </p>
+                                    <footer>来自 <cite title="Source Title">江西的网友</cite></footer>
+                                </blockquote>
+                                <blockquote>
+                                    <p class="crop-p">
+                                        外观大气霸气空间超大座椅舒适性强。客观得说，首先是本田的发动机技术吸引了我，身边的朋友买的本田车开了十年八年都不用修理，咱老百姓买车不图别的，看的是质量；其次是车体空间宽大，商务家用都可以，开出去朋友都大加称赞；第三是叹服于本田的创新，无论是技术性能，还是外观内饰，都可以和欧美车相媲美，甚至还有超越。动力一般般，但是深踩一样有劲。
+                                    </p>
+                                    <footer>来自 <cite title="Source Title">江西的网友</cite></footer>
+                                </blockquote>                               
+                            </div>
+                            <nav>
+                                <ul class="pager">
+                                    <li><a href="javascript:void(0)" class="change area1">换一批</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+				<div class="row crop-intro-container" id="图片集">
+                            <div class="col-sm-12 corp-intro-title">
+                                <i class="fa fa-picture-o fa-2x"></i>
+                                <h4>图片集</h4>
+                            </div>                       
+                            <div class="col-sm-12 crop-pic-padding">
+                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">                                 
+                                    <div class="carousel-inner crop-pic-sclie" role="listbox" id="picture_1">
+                                        <div class="item active">
+                                            <img src="http://image.16888.com/picLib/57328/57331/2010122809565917_5.jpg" alt="...">                                       
+                                        </div>
+                                        <div class="item">
+                                            <img src="http://pic.52che.com/marketing/shenyang/2010-06-04/2006454310.jpg" alt="...">                                        
+                                        </div>
+                                        <div class="item">
+                                            <img src="http://image.bitauto.com/dealer/news/100030401/6408071f-f5c9-4808-8826-806ef1c1beb1.jpg" alt="...">                                        
+                                        </div>
+                                    </div>                                    
+                                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+
+                            </div>                                               
+                        </div>
+			</div>
+			<div class="col-sm-6 block2">
+				<p class="head">请选择需要进行对比的车型</p>
+				<div class="row">
+					<div class="col-sm-4">
+						<select name="company_1" class="company_1">
+							<option value=""></option>
+							<option value="1">广汽集团</option>
+							<option value="2">比亚迪集团</option>
+						</select>
+					</div>
+					<div class="col-sm-4">
+						<select name="brand_1_1" class="brand_1_1">
+							<option value="0"></option>
+							<option value="1">广汽传祺</option>
+							<option value="2">广汽丰田</option>
+							<option value="3">广汽本田</option>
+							<option value="4">广汽菲克菲亚特</option>
+							<option value="5">广汽三菱</option>
+							<option value="6">广汽吉奥</option>
+						</select>
+						<select name="brand_1_2" class="brand_1_2">
+							<option value="0"></option>
+							<option value="7">比亚迪</option>
+						</select>
+					</div>
+					<div class="col-sm-4">
+						<select name="serie_1_1" class="serie_1_1">
+							<option value="0"></option>
+							<option value="1">传祺GS5 Super</option>
+							<option value="2">传祺GS5</option>
+							<option value="3">传祺GA3</option>
+							<option value="4">传祺GS4</option>
+							<option value="5">传祺GA3S视界</option>
+							<option value="6">传祺GA5</option>
+							<option value="7">传祺GA6</option>
+						</select>
+						<select name="serie_1_2" class="serie_1_2">
+							<option value="0"></option>
+							<option value="8">雅力士</option>
+							<option value="9">YARiS L 致炫</option>
+							<option value="10">汉兰达</option>
+							<option value="11">雷凌</option>
+							<option value="12">凯美瑞</option>
+							<option value="13">逸致</option>
+						</select>
+						<select name="serie_1_3" class="serie_1_3">
+							<option value="0"></option>
+							<option value="14">思迪</option>
+							<option value="15">奥德赛</option>
+							<option value="16">歌诗图</option>
+							<option value="17">凌派</option>
+							<option value="18">缤智</option>
+							<option value="19">飞度</option>
+							<option value="20">锋范经典</option>
+							<option value="21">锋范</option>
+							<option value="22">理念S1</option>
+							<option value="23">雅阁</option>
+						</select>
+						<select name="serie_1_4" class="serie_1_4">
+							<option value="0"></option>
+							<option value="24">菲翔</option>
+							<option value="25">致悦</option>
+						</select>
+						<select name="serie_1_5" class="serie_1_5">
+							<option value="0"></option>
+							<option value="26">帕杰罗</option>
+							<option value="27">帕杰罗 劲畅</option>
+							<option value="28">劲炫ASX</option>
+						</select>
+						<select name="serie_1_6" class="serie_1_6">
+							<option value="0"></option>
+							<option value="29">财运100</option>
+							<option value="30">财运300</option>
+							<option value="31">吉奥-星朗</option>
+							<option value="32">星旺</option>
+							<option value="33">广汽吉奥GX6</option>
+							<option value="34">E美</option>
+							<option value="35">奥轩G3</option>
+							<option value="36">奥轩GX5</option>
+							<option value="37">星旺CL</option>
+							<option value="38">奥轩G5</option>
+							<option value="39">广汽吉奥GP150</option>
+						</select>
+						<select name="serie_1_7" class="serie_1_7">
+							<option value="0"></option>
+							<option value="40">比亚迪e6</option>
+							<option value="41">比亚迪F6</option>
+							<option value="42">速锐</option>
+							<option value="43">比亚迪F3</option>
+							<option value="44">比亚迪G3</option>
+							<option value="45">比亚迪G6</option>
+							<option value="46">比亚迪-秦</option>
+							<option value="47">比亚迪G5</option>
+							<option value="48">福莱尔</option>
+							<option value="49">比亚迪-宋</option>
+							<option value="50">比亚迪-唐</option>
+							<option value="51">腾势</option>
+							<option value="52">比亚迪S6</option>
+							<option value="53">比亚迪M6</option>
+							<option value="54">比亚迪F0</option>
+							<option value="55">比亚迪F3R</option>
+							<option value="56">比亚迪S7</option>
+							<option value="57">比亚迪L3</option>
+							<option value="58">比亚迪G3R</option>
+							<option value="59">思锐</option>
+						</select>
+					</div>
+				</div><br />
+				<p class="margin-left">属性(可选)</p>
+				<select name="attr_1_1" class="attr_1_1" onchange="change(2)">
+							<option value="0"></option>
+							<option value="8">性价比</option>
+							<option value="7">内饰</option>
+							<option value="6">外观</option>
+							<option value="5">舒适性</option>
+							<option value="4">油耗</option>
+							<option value="3">操控</option>
+							<option value="2">动力</option>
+							<option value="1">空间</option>
+				</select><br />
+				<button class="con-2 btn btn-default">确定</button>
+				<div class="row crop-intro-container" id="品牌简介">
+							<div class="col-sm-12 corp-intro-title">
+								<i class="fa fa-credit-card-alt  fa-2x"></i>
+								<h4>简介</h4>
+							</div>
+							<div class="col-sm-12 crop-intro">
+								<p class="crop-information" id="introduce intro2">
+									&emsp;&emsp; 比亚迪创立于1956年，是一家中国汽车品牌，主要生产商务轿车和家用轿车。比亚迪汽车遵循自主研发、自主生产、自主品牌的发展路线，矢志打造真正物美价廉的国民用车，产品的设计既汲取国际潮流的先进理念，又符合中国文化的审美观念。比亚迪新标识将不再沿用原有的蓝白相间色，图案改为椭圆形状，并加入了光影元素。从字体的排列、图形的颜色都发生了巨大变化，突出了比亚迪汽车的创新、科技和企业文化精髓，令比亚迪品牌注入了新的内涵和活力。　　比亚迪高层人士透露，比亚迪新标识更加简洁直观，并具有国际化元素。通过这次换标，比亚迪汽车将围绕打造国际品牌这个目标，全面促进企业产、科、研、销各个层面国际品牌意识的提高，不断提高企业的市场洞察力，最终达到比亚迪品牌的优质和高含金量。比亚迪股份公司创立于1995年，由20多人的规模起步，2003年成长为全球第二大充电电池生产商，同年组建比亚迪汽车。以做电池起家的比亚迪谈到造汽车，无非是在扮演一位“门外汉”的角色。正是利用了“自主知识产权”的响亮名号和对秦川汽车的收购行为，使得比亚迪有了相对于其他新手的先发优势。短短一年内，比亚迪汽车的产品线由原来单一的“福莱尔”微型轿车，迅速扩充为包括a级燃油车、c级燃油轿车、锂离子电动汽车、混合动力汽车在内的全线产品。
+								</p>
+							</div>
+				</div>
+				<div class="row crop-intro-container attr2" id="属性分析">
+							<div class="col-sm-12 corp-intro-title">
+								<i class="fa fa-pie-chart  fa-2x"></i>
+								<h4 class="attrname2">属性分析</h4>
+							</div>
+							<div class="col-sm-12 crop-padding">
+								<div class="crop-anlyse" id="crop-attr-anlyse attr2"></div>
+							</div>
+				</div>
+				<div class="row crop-intro-container ana_block2" id="品牌评价分析">
+							<div class="col-sm-12 corp-intro-title">
+								<i class="fa fa-bar-chart  fa-2x"></i>
+								<h4>评价分析</h4>
+							</div>
+							<div class="col-sm-12 crop-padding">
+								<div class="crop-anlyse" id="crop-comment-anlyse ana2"></div>
+							</div>
+				</div>
+				<div class="row crop-intro-container" id="品牌关注趋势">
+							<div class="col-sm-12 corp-intro-title">
+								<i class="fa fa-line-chart  fa-2x"></i>
+								<h4>关注趋势</h4>
+							</div>
+							<div class="col-sm-12 crop-padding">
+								<div class="crop-anlyse" id="brand-love-tread tend2"></div>
+							</div>
+				</div>
+				<div class="row crop-intro-container" id="查看评论">
+                            <div class="col-sm-12 corp-intro-title">
+                                <i class="fa fa-commenting-o fa-2x"></i>
+                                <h4>查看评论</h4>
+                            </div>                       
+                            <div class="col-sm-12 crop-comment-list" id="comment_2"> 
+                                <blockquote>
+                                    <p class="crop-p">
+                                        外观大气霸气空间超大座椅舒适性强。客观得说，首先是本田的发动机技术吸引了我，身边的朋友买的本田车开了十年八年都不用修理，咱老百姓买车不图别的，看的是质量；其次是车体空间宽大，商务家用都可以，开出去朋友都大加称赞；第三是叹服于本田的创新，无论是技术性能，还是外观内饰，都可以和欧美车相媲美，甚至还有超越。动力一般般，但是深踩一样有劲。
+                                    </p>
+                                    <footer>来自 <cite title="Source Title">江西的网友</cite></footer>
+                                </blockquote>
+                                <blockquote>
+                                    <p class="crop-p">
+                                        外观大气霸气空间超大座椅舒适性强。客观得说，首先是本田的发动机技术吸引了我，身边的朋友买的本田车开了十年八年都不用修理，咱老百姓买车不图别的，看的是质量；其次是车体空间宽大，商务家用都可以，开出去朋友都大加称赞；第三是叹服于本田的创新，无论是技术性能，还是外观内饰，都可以和欧美车相媲美，甚至还有超越。动力一般般，但是深踩一样有劲。
+                                    </p>
+                                    <footer>来自 <cite title="Source Title">江西的网友</cite></footer>
+                                </blockquote>
+                                <blockquote>
+                                    <p class="crop-p">
+                                        外观大气霸气空间超大座椅舒适性强。客观得说，首先是本田的发动机技术吸引了我，身边的朋友买的本田车开了十年八年都不用修理，咱老百姓买车不图别的，看的是质量；其次是车体空间宽大，商务家用都可以，开出去朋友都大加称赞；第三是叹服于本田的创新，无论是技术性能，还是外观内饰，都可以和欧美车相媲美，甚至还有超越。动力一般般，但是深踩一样有劲。
+                                    </p>
+                                    <footer>来自 <cite title="Source Title">江西的网友</cite></footer>
+                                </blockquote>                               
+                            </div>
+                            <nav>
+                                <ul class="pager">
+                                    <li><a href="javascript:void(0)" class="change area2">换一批</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+				<div class="row crop-intro-container" id="图片集">
+                            <div class="col-sm-12 corp-intro-title">
+                                <i class="fa fa-picture-o fa-2x"></i>
+                                <h4>图片集</h4>
+                            </div>                       
+                            <div class="col-sm-12 crop-pic-padding">
+                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">                                 
+                                    <div class="carousel-inner crop-pic-sclie" role="listbox" id="picture_2">
+                                        <div class="item active">
+                                            <img src="http://image.16888.com/picLib/57328/57331/2010122809565917_5.jpg" alt="...">                                       
+                                        </div>
+                                        <div class="item">
+                                            <img src="http://pic.52che.com/marketing/shenyang/2010-06-04/2006454310.jpg" alt="...">                                        
+                                        </div>
+                                        <div class="item">
+                                            <img src="http://image.bitauto.com/dealer/news/100030401/6408071f-f5c9-4808-8826-806ef1c1beb1.jpg" alt="...">                                        
+                                        </div>
+                                    </div>                                    
+                                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+
+                            </div>                                               
+                        </div>
+			</div>
+			</div>
+		</div>
+		<div class="col-sm-12 bottom-name">
+			<p>
+				&copy; 2016
+				<a href="http://www.gdufs.edu.cn/" target="_blank">
+					广东外语外贸大学
+				</a>
+				<a href="http://iiip.gdufs.edu.cn/">
+					智能信息处理研究所 数据挖掘实验室
+				</a> 保留所有权利
+				<a href="about.html" target="_blank">
+					关于我们
+				</a>
+			</p>
+		</div>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script src="echarts/build/dist/echarts.js"></script>
+		<script type="text/javascript" src="js/automining.js" ></script>
+		<script type="text/javascript" src="js/compare.js" ></script>
+	</body>
+</html>

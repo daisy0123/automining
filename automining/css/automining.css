@@ -36,15 +36,11 @@ body {
 	color: #fff;
 }
 
-.navbar-search {
-	padding-left: 480px;
-}
 
-.search-control,
-.search-submit {
-	height: 30px;
+.fa{
+	/*margin-right: 20px;*/
+	float: left;
 }
-
 
 /*
  尾部
@@ -286,8 +282,8 @@ body {
 }
 
 .tb th,
-td,
-p {
+.ranktable td,
+.ranktable p ,.data-show p{
 	color: #fff;
 }
 
@@ -435,7 +431,9 @@ p {
 	background-color: #393939;
 	padding-top: 51px;
 }
-
+.crop-car-container p{
+	color:#fff;
+}
 .corp-nav {
 	min-height: 600px;
 	position: fixed;
@@ -642,3 +640,5 @@ span.more-sinal {
 .cadj {
 	color: red;
 }
+
+

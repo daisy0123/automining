@@ -1,0 +1,46 @@
+.head{
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+select{
+	width: 100px;
+	font-size: 13px;
+	margin-left: 50px;
+}
+
+.btn-default{
+	margin-left: 50px;
+	margin-top: 10px;
+	font-size: 13px;
+}
+
+.crop-intro-container{
+	margin-top: 30px;
+	border: none;
+	margin-bottom: 20px;
+	padding-left: 10px;
+	opacity: 0;
+}
+
+.col-sm-6{
+	overflow: auto;
+}
+
+.margin-left{
+	margin-left: 50px;
+}
+
+.crop-information{
+	height: 200px;
+	overflow: auto;
+}
+
+.crop-comment-list{
+	height: 400px;
+	overflow: auto;
+}
+.change{
+	margin-top: 15px;
+}

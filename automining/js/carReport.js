@@ -303,7 +303,7 @@ function show(param) {
 		barChart = require('echarts').init(document.getElementById('box_in'));
 		barChart.setOption({
 			title: {
-				text: '',
+				text: ' ',
 				x: 'left'
 
 			},
@@ -326,16 +326,13 @@ function show(param) {
 				x: 'right',
 				y: 'bottom',
 				feature: {
-					mark: {
-						show: true
-					},
 					dataView: {
 						show: true,
 						readOnly: false
 					},
 					magicType: {
 						show: true,
-						type: ['line', 'bar', 'stack', 'tiled']
+						type: ['line', 'bar']
 					},
 					restore: {
 						show: true
@@ -557,7 +554,11 @@ require(
 	[
 		'echarts',
 		'echarts/chart/map',
-		'echarts/chart/bar'
+		'echarts/chart/bar',
+		'echarts/chart/pie',
+		'echarts/chart/funnel',
+		'echarts/chart/wordCloud',
+		'echarts/chart/line'
 	],
 	function(ec) {
 		mapChart = ec.init(document.getElementById('block-left'));

@@ -64,10 +64,11 @@ $(function() {
 
 	/*导航滚动*/
 	$(".navbar-scroll>ul>li>a").click(function() {
+		$top = $($(this).attr("href")).offset().top;
 		$("html, body").animate({
-			scrollTop: $($(this).attr("href")).offset().top + "px"
+			scrollTop: $top + "px"
 		}, {
-			duration: 500,
+			duration: 400,
 			easing: "swing"
 		});
 
@@ -96,6 +97,7 @@ function getData(type, iid) {
 			all = data;
 		}
 	});
+
 	if(type == "1" & iid == "1") {
 		document.getElementsByClassName("row crop-intro-container list1")[0].style.display = "block";
 		document.getElementsByClassName("row crop-intro-container list2")[0].style.display = "none";
@@ -126,11 +128,7 @@ function getData(type, iid) {
 			'echarts/chart/line'
 		],
 		function(ec) {
-			//          	if(type == "3"){
-			//          		cropbarChart = ec.init(document.getElementById('crop-comment-anlyse'));		//属性分析
-			//      			cropbarChart.setOption(cropbarOption1());
-			//          	}
-			//          	else {
+
 			cropbarChart = ec.init(document.getElementById('crop-comment-anlyse')); //属性分析
 			cropbarChart.setOption(cropbarOption(all.eight));
 			//          	}
@@ -341,7 +339,8 @@ function cropbarOption(data) {
 					label: {
 						show: true,
 						position: 'insideLeft',
-//						                          formatter: '{c}%'
+						formatter: '{c}%'
+						//formatter: '{c0}%'
 					}
 				}
 			},
@@ -355,7 +354,7 @@ function cropbarOption(data) {
 					label: {
 						show: true,
 						position: 'insideLeft',
-//						                          formatter: '{c}%'
+						formatter: '{c}%'
 					}
 				}
 			},
@@ -369,7 +368,7 @@ function cropbarOption(data) {
 					label: {
 						show: true,
 						position: 'insideLeft',
-//						                          formatter: '{c}%'
+						formatter: '{c}%'
 					}
 				}
 			},
@@ -491,6 +490,80 @@ function cropbarOption1() {
 	}
 };
 
+function cropAttrOption(eight, attrid) {
+	//	alert(attrid);
+	return {
+		tooltip: {
+			trigger: 'item',
+			formatter: "{a} <br/>{b} : {c} ({d}%)"
+		},
+		legend: {
+			orient: 'vertical',
+			x: 'left',
+			textStyle: {
+				color: '#fff'
+			},
+			data: ['好评', '中评', '差评'],
+			selected: {
+				'好评': true,
+				'中评': true,
+				'差评': true,
+			}
+		},
+		toolbox: {
+			show: true,
+			feature: {
+				mark: {
+					show: true
+				},
+				dataView: {
+					show: true,
+					readOnly: false
+				},
+				magicType: {
+					show: true,
+					type: ['pie', 'funnel'],
+					option: {
+						funnel: {
+							x: '25%',
+							width: '50%',
+							funnelAlign: 'left',
+							max: 1548
+						}
+					}
+				},
+				restore: {
+					show: true
+				},
+				saveAsImage: {
+					show: true
+				}
+			}
+		},
+		calculable: true,
+		series: [{
+			name: '属性分析',
+			type: 'pie',
+			radius: '55%',
+			center: ['50%', '60%'],
+			data: [{
+				value: eight[0][attrid - 1],
+				//value: 10,
+				name: '好评'
+
+			}, {
+				value: eight[1][attrid - 1],
+				//value: 20,
+				name: '中评'
+			}, {
+				value: eight[2][attrid - 1],
+				//value: 70,
+				name: '差评'
+			}]
+		}]
+	}
+};
+
 function croppieOption(placeNum) {
 	return {
 		tooltip: {
@@ -555,7 +628,7 @@ function croppieOption(placeNum) {
 		},
 		calculable: true,
 		series: [{
-			name: '访问来源',
+			name: '评价分布系数',
 			type: 'pie',
 			radius: '55%',
 			center: ['50%', '60%'],
@@ -1213,9 +1286,10 @@ function tendOption(data) {
 			},
 			boundaryGap: false,
 			data: ['13年1月', '13年2月', '13年3月', '13年4月', '13年5月', '13年6月', '13年7月', '13年8月', '13年9月', '13年10月', '13年11月', '13年12月',
-			'14年1月', '14年2月', '14年3月', '14年4月', '14年5月', '14年6月', '14年7月', '14年8月', '14年9月', '14年10月', '14年11月', '14年12月',
-			'15年1月', '15年2月', '15年3月', '15年4月', '15年5月', '15年6月', '15年7月', '15年8月', '15年9月', '15年10月', '15年11月', '15年12月',
-			'16年1月', '16年2月', '16年3月', '16年4月', '16年5月', '16年6月', '16年7月', '16年8月', '16年9月', '16年10月', '16年11月', '16年12月']
+				'14年1月', '14年2月', '14年3月', '14年4月', '14年5月', '14年6月', '14年7月', '14年8月', '14年9月', '14年10月', '14年11月', '14年12月',
+				'15年1月', '15年2月', '15年3月', '15年4月', '15年5月', '15年6月', '15年7月', '15年8月', '15年9月', '15年10月', '15年11月', '15年12月',
+				'16年1月', '16年2月', '16年3月', '16年4月', '16年5月', '16年6月', '16年7月', '16年8月', '16年9月', '16年10月', '16年11月', '16年12月'
+			]
 		}],
 		yAxis: [{
 			name: '关注指数',
